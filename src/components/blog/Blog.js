@@ -7,6 +7,7 @@ import blogPic3 from "../../assets/images/post-3.jpg";
 function Blog() {
   let blogs = [
     {
+      blogeId : 0,
       blogImage: blogPic1,
       blogTitle: "post title 1",
       blogDesc:
@@ -15,6 +16,7 @@ function Blog() {
       blogTime: "5",
     },
     {
+      blogeId : 1,
       blogImage: blogPic2,
       blogTitle: "post title 2",
       blogDesc:
@@ -23,6 +25,7 @@ function Blog() {
       blogTime: "3",
     },
     {
+      blogeId : 2,
       blogImage: blogPic3,
       blogTitle: "post title 3",
       blogDesc:
@@ -46,7 +49,7 @@ function Blog() {
               <BlogItem {...blogs[2]} /> */}
 
           {blogs.map((blog) => (
-            <BlogItem {...blog} />
+            <BlogItem key={blog.blogeId} {...blog} />
           ))}
         </div>
       </div>
